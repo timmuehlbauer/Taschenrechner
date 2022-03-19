@@ -1,0 +1,74 @@
+* {
+    padding: 0;/*abstand zwischen text und grenze*/
+    margin: 0;/*abstand zum rand der seite*/
+    box-sizing: border-box;/*legt größe der box fest damit padding nichts beeinflusst*/
+    outline: 0;/*rand*/
+}
+body {
+    font-family: sans-serif;/*schriftart*/
+}
+.container {
+    height: 100vh; /*viewport-height; relativ zu 100% der höhe des sichtfeldes*/
+    width: 100vw;
+    display: grid; /*ermöglicht spalten und zeilen ausrichtung;einfacher als mit tabelle zu stylen*/
+    place-items: center;
+}
+body {
+    background-image: linear-gradient( to bottom right, rgb(79,51,176), rgb(210,53,165)) }
+/*hintergrund;farbverlauf; rgb ->rot grün blau komponenten*/
+.display  {
+    margin: 10px;
+    height: 75px;
+    width: 270px;
+    display: flex; /*flexible box*/
+    align-items: flex-end;/*das gleiche wie da drunter nur y-achse*/
+    justify-content: flex-end;/*am ende der x-achse der flexiblen box anzeigen*/
+    font-size: 30px;
+}
+.operator-button{
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.number-button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;/*für die kreisform des buttons*/
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;/*verzögert den verlauf vom hover*/
+}
+.taschenrechner  {
+    position: center;/*zentrierte position*/
+    height: 500px;
+    width: 335px;
+    padding: 20px;
+    border-radius: 10px;/*grenzradius*/
+    box-shadow: 0 0 60px white;
+}
+.operator-button:hover  {
+    transform: scale(1.1)
+}
+.number-button:hover {
+    transform: scale(1.1)
+}
+/*hover: erhöhen des buttons, wenn cursor drauf ist
+scale ist der vektor, der die veränderung des buttons bestimmt*/
+.taschenrechner {
+    background-color: #071115
+}
+.number-button {
+    background-color: #a0c7dc;
+    color: black
+}
+.operator-button  {
+    background-color: #d29dce;
+    color: black;
+}

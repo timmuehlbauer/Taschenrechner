@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Taschenrechner</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<form name="rechner">
+    <div class="container"> <!--div ist durch class festgelegter bereich/leerer rahmen, der einfach zu stylen ist-->
+        <div class = "taschenrechner">
+    <table><!-- tabelle mit einer tr/tablerow, also einer Zeile-->
+    <tr>
+        <td><input type="text" class="display" name="display"></td> <!-- textfeld, also display definieren; td = informationzelle in der tabelle-->
+    </tr></table>
+<table><!--Tabelle für die buttons-->
+                <tr>
+                    <td><input type="button" class="number-button" value="  7   " onclick="hinzufuegen('7')"></td><!--definieren der buttons;value fürs sehen; onclick und die passende funktion, damit button funktioniert, bestimmen-->
+                    <td><input type="button" class="number-button" value="  8  " onclick="hinzufuegen('8')"></td><!-- nach funktion klassifizieren zum stylen-->
+                    <td><input type="button" class="number-button" value="  9   " onclick="hinzufuegen('9')"></td>
+                    <td><input type="button" class="operator-button" value="  +   " onclick="hinzufuegen('+')"></td>
+                </tr><!--tablerow=tabellenzeile-->
+                <tr>
+                    <td><input type="button" class="number-button" value="  4   " onclick="hinzufuegen('4')"></td>
+                    <td><input type="button" class="number-button" value="  5   " onclick="hinzufuegen('5')"></td>
+                    <td><input type="button" class="number-button" value="  6   " onclick="hinzufuegen('6')"></td>
+                    <td><input type="button" class="operator-button" value="  -   " onclick="hinzufuegen('-')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="number-button" value="  1   " onclick="hinzufuegen('1')"></td>
+                    <td><input type="button" class="number-button" value="  2   " onclick="hinzufuegen('2')"></td>
+                    <td><input type="button" class="number-button" value="  3   " onclick="hinzufuegen('3')"></td>
+                    <td><input type="button" class="operator-button" value="  *   " onclick="hinzufuegen('*')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="operator-button" value="  =   " onclick="ergebnis()"></td>
+                    <td><input type="button" class="number-button" value="  0   " onclick="hinzufuegen('0')"></td>
+                    <td><input type="button" class="operator-button" value="  .   " onclick="hinzufuegen('.')"></td>
+                    <td><input type="button" class="operator-button" value="  /   " onclick="hinzufuegen('/')"></td>
+                </tr >
+                <tr>
+                    <td><input type="button" class="operator-button" value="sqrt " onclick="sonderfunktion('sqrt')"></td>
+                    <td><input type="button" class="operator-button" value=" pow " onclick="sonderfunktion('pow')"></td>
+                    <td><input type="button" class="operator-button" value=" log " onclick="sonderfunktion('log')"></td>
+                    <td><input type="reset" class="operator-button" value="  C  "></td><!-- reset reicht,um mit dessen button die eingabe im display zu löschen-->
+                </tr>
+            </table>
+    </div></div ></form>
+
+</html>
